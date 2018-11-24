@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "829339287842",
+    "firebase_url": "https://planttrees-d16cb.firebaseio.com",
+    "project_id": "planttrees-d16cb",
+    "storage_bucket": "planttrees-d16cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829339287842:android:f495af3033d8913f",
+        "android_client_info": {
+          "package_name": "com.example.moon.planttrees"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829339287842-vuurvo7p8tldbo3hidiijihi0qu37cpg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.moon.planttrees",
+            "certificate_hash": "88d6a0cbc44c4772af7dcac0123619e0540d6c90"
+          }
+        },
+        {
+          "client_id": "829339287842-chn54r2mu2akc25lpc5jrmnipvgol16g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7XMy1A_dgD9MJ-RZ06vccCQS_tnsfvLk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829339287842-chn54r2mu2akc25lpc5jrmnipvgol16g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

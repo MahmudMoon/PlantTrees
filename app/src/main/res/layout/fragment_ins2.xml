@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".ins2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instructio2"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold|italic"
+        android:textColor="#000"/>
+
+
+    <!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="25dp">
+
+
+
+        <ImageButton
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_white"
+            />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round"
+            android:layout_margin="4dp"
+            />
+
+        <ImageButton
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_white"
+            />
+
+    </LinearLayout>
+
+-->
+</FrameLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GiveAnswer"
+    android:orientation="vertical"
+    android:background="@color/back">
+
+
+
+    <EditText
+        android:id="@+id/et_give_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_margin="16dp"
+        android:inputType="textMultiLine"
+        android:hint="GIVE YOUR ANSWER"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/blue"
+        android:layout_marginTop="16dp"/>
+
+
+    <Button
+        android:id="@+id/btn_submit_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:textAppearance="?android:textAppearanceMedium"/>
+
+</RelativeLayout>

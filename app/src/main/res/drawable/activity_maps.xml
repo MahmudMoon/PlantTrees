@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_gravity="right">
+
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        style="@style/MaterialSearchBarLight"
+        app:mt_speechMode="false"
+        app:mt_hint="City"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/searchBar"
+        />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_my_location_black_24dp"
+            app:civ_border_color="#fdf9f9"
+            android:layout_marginTop="15sp"
+            app:civ_border_width="2dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="25dp"
+            />
+        />
+
+    </LinearLayout>
+
+</FrameLayout>
