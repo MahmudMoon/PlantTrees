@@ -41,7 +41,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     String LocationName;
     LatLng dhaka;
     LocationManager locationManager;
-    Location lastKnownLocation;
     LatLng currentLOC;
     MarkerOptions markerOptions;
     CircleImageView circleImageView;

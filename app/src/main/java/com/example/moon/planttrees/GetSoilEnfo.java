@@ -20,6 +20,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class GetSoilEnfo extends AppCompatActivity {
 
     private static final String TAG = "myTag" ;
@@ -27,14 +29,17 @@ public class GetSoilEnfo extends AppCompatActivity {
     ArrayList<ObjectCreated> arrayList;
     String jsonUrl;
     ListView listView;
-    FloatingActionButton fbtn;
+    CircleImageView fbtn;
     GoogleProgressBar progressBar;
 
 
-    int[] images = {R.drawable.im1,R.drawable.im2,R.drawable.im3,R.drawable.im4,R.drawable.im5,
-            R.drawable.im1,R.drawable.im2,R.drawable.im3,R.drawable.im4,R.drawable.im5};
+    int[] images = {R.drawable.clay,R.drawable.sand,R.drawable.nitrozen,R.drawable.carbon,
+            R.drawable.alluminium,
+            R.drawable.calsium,R.drawable.magnesum,R.drawable.sodium,R.drawable.ph,
+            R.drawable.water};
+
     String[] names = {"Clay","Sand","Nitrozen","carbon","Alliuminium"
-            ,"calsium","Magnesium","sodium","Potasium","water"};
+            ,"calsium","Magnesium","sodium","Ph","water"};
     int[] ratios = new int[10];
 
 
@@ -46,7 +51,7 @@ public class GetSoilEnfo extends AppCompatActivity {
         jsonUrl = intent.getStringExtra(Info.urlName);
         arrayList = new ArrayList<ObjectCreated>();
         listView = (ListView)findViewById(R.id.list);
-        fbtn = (FloatingActionButton)findViewById(R.id.btn_f);
+        fbtn = (CircleImageView)findViewById(R.id.btn_f);
         progressBar = (GoogleProgressBar)findViewById(R.id.google_progress);
         jsonObjectRequest  = new JsonObjectRequest(Request.Method.GET, jsonUrl, null, new Response.Listener<JSONObject>() {
             @Override
@@ -155,9 +160,9 @@ public class GetSoilEnfo extends AppCompatActivity {
             ratios[7] = sodium;
             Log.i(TAG, "jsonParsing: Sodium " + sodium);
 
-            int potasium = getPotasium(properties);
-            ratios[8] = potasium;
-            Log.i(TAG, "jsonParsing: Potasium " + potasium);
+            int ph = getph(properties);
+            ratios[8] = ph;
+            Log.i(TAG, "jsonParsing: Potasium " + ph);
 
             int waterLevel = getWater(properties);
             ratios[9] = waterLevel;
@@ -170,10 +175,10 @@ public class GetSoilEnfo extends AppCompatActivity {
 
     }
 
-    private int getPotasium(JSONObject properties) {
+    private int getph(JSONObject properties) {
         JSONObject _rate_name = null;
         try {
-            _rate_name = properties.getJSONObject("EXKX");
+            _rate_name = properties.getJSONObject("PHIHOX");
             JSONObject  _ratio = _rate_name.getJSONObject("M");
             int sl1 = _ratio.getInt("sl1");
             return sl1;

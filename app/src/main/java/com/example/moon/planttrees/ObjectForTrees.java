@@ -1,31 +1,42 @@
 package com.example.moon.planttrees;
 
 public class ObjectForTrees {
-    private String TreeOne;
-    private String TreeTwo;
+    private String name;
+    private String description;
+    private String url;
+
 
     public ObjectForTrees() {
 
     }
 
-    public ObjectForTrees(String treeOne, String treeTwo) {
-        TreeOne = treeOne;
-        TreeTwo = treeTwo;
+    public ObjectForTrees(String name, String description, String url) {
+        this.name = name;
+        this.description = description;
+        this.url = url;
     }
 
-    public String getTreeOne() {
-        return TreeOne;
+    public String getName() {
+        return name;
     }
 
-    public void setTreeOne(String treeOne) {
-        TreeOne = treeOne;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTreeTwo() {
-        return TreeTwo;
+    public String getDescription() {
+        return description;
     }
 
-    public void setTreeTwo(String treeTwo) {
-        TreeTwo = treeTwo;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

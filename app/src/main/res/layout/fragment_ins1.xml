@@ -49,6 +49,17 @@
 
     </LinearLayout>
 
--->
+    -->
+
+        <Button
+        android:id="@+id/ins_complete1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S K I P"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="8dp"/>
+
+
+
 
 </FrameLayout>
