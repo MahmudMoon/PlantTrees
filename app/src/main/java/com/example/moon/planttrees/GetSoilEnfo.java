@@ -42,6 +42,17 @@ public class GetSoilEnfo extends AppCompatActivity {
             ,"calsium","Magnesium","sodium","Ph","water"};
     int[] ratios = new int[10];
 
+    String[] units = {" tonnes / ha"
+            ," %"
+            ," g / kg"
+            ," g / kg"
+            ," ppm"
+            ," cmolc / kg"
+            ," cmolc / kg"
+            ," cmolc / kg"
+            ,""
+            ," %"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +71,6 @@ public class GetSoilEnfo extends AppCompatActivity {
                 try {
                     Toast.makeText(getApplicationContext(),String.valueOf(response.getBoolean("raw")),Toast.LENGTH_SHORT).show();
                     fbtn.setClickable(false);
-
                     jsonParsing(response);
                     packEveryThing();
                     CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(),arrayList);
@@ -119,7 +129,7 @@ public class GetSoilEnfo extends AppCompatActivity {
 
     private void packEveryThing() {
         for(int i=0;i<10;i++) {
-            arrayList.add( new ObjectCreated (names[i],ratios[i],images[i]));
+            arrayList.add( new ObjectCreated (names[i],ratios[i],images[i],units[i]));
         }
         Log.i(TAG, "packEveryThing: Data LOADED");
 
@@ -162,7 +172,7 @@ public class GetSoilEnfo extends AppCompatActivity {
 
             int ph = getph(properties);
             ratios[8] = ph;
-            Log.i(TAG, "jsonParsing: Potasium " + ph);
+            Log.i(TAG, "jsonParsing: PH " + ph);
 
             int waterLevel = getWater(properties);
             ratios[9] = waterLevel;

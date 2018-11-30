@@ -4,11 +4,13 @@ class ObjectCreated {
     String _name;
     int ratio;
     int id_number;
+    String unit;
 
-    public ObjectCreated(String _name, int ratio, int id_number) {
+    public ObjectCreated(String _name, int ratio, int id_number,String unit) {
         this._name = _name;
         this.ratio = ratio;
         this.id_number = id_number;
+        this.unit = unit;
     }
 
     public String get_name() {
@@ -33,5 +35,13 @@ class ObjectCreated {
 
     public void setId_number(int id_number) {
         this.id_number = id_number;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 }

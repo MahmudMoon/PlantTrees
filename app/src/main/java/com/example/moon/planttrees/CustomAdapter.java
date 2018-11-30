@@ -14,7 +14,7 @@ public class CustomAdapter extends BaseAdapter {
     Context mContext;
     LayoutInflater inflater;
     ArrayList<ObjectCreated> mArrayList;
-    TextView _name,_ratio;
+    TextView _name,_ratio,_unit;
     ImageView _imageView;
 
     public CustomAdapter(Context mContext, ArrayList<ObjectCreated> mArrayList) {
@@ -42,10 +42,12 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = inflater.inflate(R.layout.list_layout, null);
         _name = (TextView)view.findViewById(R.id.tv_name);
+        _unit = (TextView)view.findViewById(R.id.tv_unit);
         _ratio = (TextView)view.findViewById(R.id.tv_ratio);
         _imageView = (ImageView) view.findViewById(R.id.image_view);
 
         _name.setText(mArrayList.get(position).get_name());
+        _unit.setText(mArrayList.get(position).getUnit());
         _ratio.setText(String.valueOf(mArrayList.get(position).getRatio()));
         _imageView.setImageResource(mArrayList.get(position).getId_number());
 
